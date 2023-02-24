@@ -10,9 +10,9 @@ def lambda_handler(event, context):
         
         
         # Especifique os grupos de segurança e seus ID's
-        bastion_ssh = 'sg-0d125a155483641fb'
-        bastion_http = 'sg-041b5cf84769f4688'
-        # bastion_https = '<securityGroup_id>'
+        bastion_ssh = '<sg_id>'
+        bastion_http = '<sg_id>'
+        # bastion_https = '<sg_id>'
         
         # Isolando instancia
         try:
