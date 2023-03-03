@@ -16,20 +16,20 @@ pessoais).
 ##### [MAIS NOVO - MAIS ANTIGO]
 
 - **GuardDuty-With-Lambda** <br>
-Para monitorar e contornar vulnerabilidades apontadas pelo GuardDuty, desenvolvi este projeto para que, quando uma vulnerabilidade for detectada, o AWS EventBridge executará uma função Lambda. Por exemplo: GuardDuty detectou uma vulnerabilidade relacinada a *Unauthorized Access*, o AWS EventBridge identifica a ameça e executa uma função Lambda. Data: 03/03/2023
+Para monitorar e contornar vulnerabilidades apontadas pelo GuardDuty, desenvolvi este projeto para que, quando uma vulnerabilidade for detectada, o AWS EventBridge executará uma função Lambda. Por exemplo: GuardDuty detectou uma vulnerabilidade relacinada a *Unauthorized Access*, o AWS EventBridge identifica a ameça e executa uma função Lambda. **Data:** *03/03/2023*
 
 - **Creating-Security-Groups** <br>
 Neste projeto, decidi ousar um pouco mais e apronfudar um pouco mais acerca do projeto anteriormente desenvolvido. Agora, será possível deixar com que a função lambda 
-crie, de forma automatizada, o grupo/grupos de segurança para você, defina o tráfego permitido e associe à instãncia. Data: 28/02/2023
+crie, de forma automatizada, o grupo/grupos de segurança para você, defina o tráfego permitido e associe à instãncia. **Data:** *28/02/2023*
 
 - **Isolating-Instancess** <br>
 Este projeto parte do mesmo princípio do projeto anterior - um script será executado em uma instância EC2 para enviar uma mensagem, contendo seu ID, ao AWS SQS -, mas
 irá executar *- imediatamente -* o script apenas quando um login via SSH (*porta 22*) for detectado. Após executado, modificado os grupos de segurança atribuídos à
-instância, isto é, por exemplo, seria possível **REMOVER** o Security Group que permite a entrada do Protocolo SSH e permitir apenas a entrada de requisições HTTP através do código: `ec2.modify_instance_attribute(InstanceId=body, Groups=[bastion_http])`. Data: 24/02/2023
+instância, isto é, por exemplo, seria possível **REMOVER** o Security Group que permite a entrada do Protocolo SSH e permitir apenas a entrada de requisições HTTP através do código: `ec2.modify_instance_attribute(InstanceId=body, Groups=[bastion_http])`. **Data:** *24/02/2023*
 
 - **Stopping-Instances** <br>
 Este projeto foi desenvolvido para que, quando um script fosse executado em uma instância EC2, seria enviado o ID desta Instância para o AWS SQS que, consequentemente,
-seria acionado a função Lambda para realizar o desligamento de instância com base no ID da instância recebido através do AWS SQS. Data: 23/02/2023
+seria acionado a função Lambda para realizar o desligamento de instância com base no ID da instância recebido através do AWS SQS. **Data:** *23/02/2023*
 
 > Estes projetos foram desenvolvidos para fins de aprendizagem e desenvolvimento profissional acerca do AWS Lambda, logo, não há nenhum código muito complexo e de
 difícil entendimento. Entretanto, pode ser que haja algumas brechas de erro e vulnerabilidades de segurança. Todavia, não recomendo que seja utilizado em um ambiente
