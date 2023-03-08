@@ -1,0 +1,6 @@
+{
+  "source": ["aws.guardduty"],
+  "detail": {
+    "type": ["Recon:EC2/Portscan", "UnauthorizedAccess:EC2/MaliciousIPCaller.Custom"]
+  }
+}
