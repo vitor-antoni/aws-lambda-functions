@@ -9,6 +9,7 @@ estarei compartilhando códigos de funções usando o AWS Lambda Service.
 Se surgir alguma dúvida ou sugestão, sinta-se à vontade em comentar. Procurarei monitorar diariamente este repositório (ou a medida que for desenvolvendo meus projetos
 pessoais).
 
+## 🚀 Projetos
 #### Abaixo, você pode conferir um breve resumo sobre cada projeto contido neste repositório:
 
 > Caso tiver interesse em utilizar estas funções, atente-se em atualizar os atributos das variáves de acordo com suas informações e necessidades.
@@ -31,9 +32,9 @@ instância, isto é, por exemplo, seria possível **REMOVER** o Security Group q
 Este projeto foi desenvolvido para que, quando um script fosse executado em uma instância EC2, seria enviado o ID desta Instância para o AWS SQS que, consequentemente,
 seria acionado a função Lambda para realizar o desligamento de instância com base no ID da instância recebido através do AWS SQS. **Data:** *23/02/2023*
 
-> Estes projetos foram desenvolvidos para fins de aprendizagem e desenvolvimento profissional acerca do AWS Lambda, logo, não há nenhum código muito complexo e de
-difícil entendimento. Entretanto, pode ser que haja algumas brechas de erro e vulnerabilidades de segurança. Todavia, não recomendo que seja utilizado em um ambiente
-de produção real.
+## 📑 Informações adicionais
+
+Estes projetos foram desenvolvidos para fins de aprendizagem e desenvolvimento profissional acerca do AWS Lambda, logo, não há nenhum código muito complexo e de difícil entendimento. Entretanto, pode ser que haja algumas brechas de erro e vulnerabilidades de segurança. Todavia, não recomendo que seja utilizado em um ambiente de produção real.
 
 Conforme eu avançar e me aprofundar meus conhecimentos neste serviço, pretendo trazer mais conteúdo para este repositório.
 
