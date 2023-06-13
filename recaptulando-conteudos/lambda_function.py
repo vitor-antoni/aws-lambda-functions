@@ -3,6 +3,7 @@ import boto3, json, os
 def lambda_handler(event, context):
     regionName = "us-east-1"
     client = boto3.client("ec2", region_name=regionName)
+    
     for record in event["Records"]:
         instaceId = record["body"]
         print(f"ID da Instancia EC2: {instaceId}")
