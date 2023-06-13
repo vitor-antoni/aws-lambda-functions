@@ -5,7 +5,7 @@ def lambda_handler(event, context):
         instaceId = record["body"]
         print(f"ID da Instancia EC2: {instaceId}")
         
-    print(variavelAmbiente())
+    print(f"Variavel ambiente: {variavelAmbiente()}")
     
 def variavelAmbiente():
     return os.environ["Senha"]
