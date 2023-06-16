@@ -1,3 +1,3 @@
 #!/bin/bash
 
-rm -rf /var/www/html/index.html
+mv /var/www/html/index.html /var/www/html/bkp.index.html
