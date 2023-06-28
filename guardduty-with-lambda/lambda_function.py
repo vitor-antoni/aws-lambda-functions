@@ -1,11 +1,11 @@
 import json, boto3
 
-def lambda_handler(event, context):
-    region = "<region>"
-    instanceId = "<instanceId>"
-    groupId = "<groupId>"
-    ebsVolumeId = "<ebsVolumeId>"
+region = "<region>"
+instanceId = "<instanceId>"
+groupId = "<groupId>"
+ebsVolumeId = "<ebsVolumeId>"
 
+def lambda_handler(event, context):
     ec2 = boto3.client('ec2', region_name=region)
 
     # Renega a permissão da porta 22 descrita no Security Group
