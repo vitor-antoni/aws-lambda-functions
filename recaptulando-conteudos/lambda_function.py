@@ -1,7 +1,8 @@
 import boto3, json, os
 
+regionName = "us-east-1"
+
 def lambda_handler(event, context):
-    regionName = "us-east-1"
     client = boto3.client("ec2", region_name=regionName)
     
     for record in event["Records"]:
