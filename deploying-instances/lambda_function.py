@@ -1,12 +1,12 @@
 import json, boto3
 
-def lambda_handler(event, context):
-    # Nome do aplicativo CodeDeploy
-    app_name = 'DeployingAplication'
-    
-    # Nome do grupo de implantação CodeDeploy
-    deployment_group = 'ImplantacaoApp'
-    
+# Nome do aplicativo CodeDeploy
+app_name = 'DeployingAplication'
+
+# Nome do grupo de implantação CodeDeploy
+deployment_group = 'ImplantacaoApp'
+
+def lambda_handler(event, context):    
     # Nome do bucket S3 onde o objeto foi enviado
     bucket_name = event['Records'][0]['s3']['bucket']['name']
     
