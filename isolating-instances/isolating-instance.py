@@ -1,18 +1,17 @@
 import json, boto3
 
+# Especifique os grupos de segurança e seus ID's
+bastion_ssh = '<sg_id>'
+bastion_http = '<sg_id>'
+# bastion_https = '<sg_id>'
+region = 'us-east-1'
+
 def lambda_handler(event, context):
-    region = 'us-east-1'
     ec2 = boto3.client('ec2', region_name=region)
     
     for record in event['Records']:
         body = record['body']
         print('ID da Instancia: ' + body)
-        
-        
-        # Especifique os grupos de segurança e seus ID's
-        bastion_ssh = '<sg_id>'
-        bastion_http = '<sg_id>'
-        # bastion_https = '<sg_id>'
         
         # Isolando instancia
         try:
