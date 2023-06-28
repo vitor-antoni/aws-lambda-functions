@@ -1,11 +1,11 @@
 import boto3
 
-def lambda_handler(event, context):
-	# Prescisa de uma lista de instâncias
-	instanceId = ["<id>"]
-	vpcId = "<id>"
-	asgName = "<id>"
+# Prescisa de uma lista de instâncias
+instanceId = ["<id>"]
+vpcId = "<id>"
+asgName = "<id>"
 
+def lambda_handler(event, context):
 	ec2 = boto3.client("ec2")
 	asg = boto3.client("autoscaling")
 
