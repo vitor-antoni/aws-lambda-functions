@@ -1,9 +1,12 @@
 import json, boto3
 
+# Caso houver um SG existente, especifique ele aqui e na linha 37 também
+existSG = '<sg_id>'
+
+region = '<region>'
+vpc_id = '<vpc>'
 
 def lambda_handler(event, context):
-    region = '<region>'
-    vpc_id = '<vpc>'
     ec2 = boto3.client('ec2', region_name=region)
 
     try:
@@ -28,9 +31,6 @@ def lambda_handler(event, context):
         print('[SUCESSO] O Security Group foi criado!')
 
         try:
-            # Caso houver um SG existente, especifique ele aqui e na linha 37 também
-            existSG = '<sg_id>'
-
             for record in event['Records']:
                 body = record['body']
 
