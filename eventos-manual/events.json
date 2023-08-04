@@ -1,4 +1,5 @@
 {
-    "nome": "nome",
-    "sobrenome": "sobrenome"
+    "nomeInput": "nome",
+    "sobrenomeInput": "sobrenome",
+    "idadeInput": 19
 }
