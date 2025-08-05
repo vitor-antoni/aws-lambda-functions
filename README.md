@@ -16,6 +16,21 @@ pessoais).
 
 ##### [MAIS NOVO - MAIS ANTIGO]
 
+- **Removing-S3-Objects** <br>
+A função lista todos os objetos no bucket especificado, calcula a data de corte (que é a data atual menos um dia) e itera sobre a lista de objetos para identificar e excluir aqueles que foram modificados antes da data de corte. Essencialmente, o script atua como uma rotina de manutenção para remover arquivos com mais de 24 horas, ajudando a gerenciar o armazenamento e o custo do bucket S3.
+
+- **Item-Dynamodb** <br>
+Função AWS Lambda que interage com o serviço Amazon DynamoDB. A função cria um cliente para o DynamoDB e, em seguida, define um dicionário chamado itemData que representa um novo item a ser inserido. Esse dicionário inclui a chave primária (primaryKey), a chave de ordenação (sortKey) e outros atributos. Por fim, o método put_item é chamado para inserir esse item na tabela do DynamoDB especificada por <tableName>. O código serve como um modelo básico para adicionar novos registros a uma tabela DynamoDB a partir de uma função Lambda.
+
+- **Importing-Aws-Layers** <br>
+Automação de instalação das dependências externas (requests e suas bibliotecas relacionadas) em uma pasta local (python/) e depois comprime essa pasta em um arquivo .zip. Este arquivo .zip é exatamente o formato necessário para ser carregado na AWS e registrado como uma Lambda Layer, permitindo que múltiplas funções Lambda compartilhem o mesmo conjunto de bibliotecas sem que elas precisem ser incluídas no pacote de implantação de cada função individualmente.
+
+- **Eventos-Manual** <br>
+Um código com estrutura muito simples simples, projetado para receber dados de um evento, processá-los e retornar uma resposta. A função extrai os valores para nome, sobrenome e idade do objeto de evento, imprime uma saudação personalizada no log do CloudWatch e, em seguida, retorna esses mesmos dados em um dicionário como a resposta da função. É um exemplo fundamental de como uma função Lambda pode ser usada para receber entrada, executar uma lógica básica e produzir uma saída estruturada.
+
+- **Deploying-Instances** <br>
+Automação do AWS Lambda que automatiza o processo de implantação de um aplicativo usando o AWS CodeDeploy. A função é acionada por um evento, como o upload de um arquivo .zip para um bucket S3. Ao ser ativada, a função extrai o nome do bucket e a chave do objeto do evento, cria um cliente CodeDeploy e define a localização do arquivo .zip no S3 como a nova revisão de implantação. Por fim, a função inicia uma nova implantação no CodeDeploy usando o aplicativo e o grupo de implantação especificados, retornando o ID da implantação recém-criada para confirmação. Essencialmente, este script conecta a automação de eventos do S3 com o fluxo de implantação do CodeDeploy, criando um pipeline simples de CI/CD.
+
 - **GuardDuty-With-Lambda** <br>
 Para monitorar e contornar vulnerabilidades apontadas pelo GuardDuty, desenvolvi este projeto para que, quando uma vulnerabilidade for detectada, o AWS EventBridge executará uma função Lambda. Por exemplo: GuardDuty detectou uma vulnerabilidade relacinada a *Unauthorized Access*, o AWS EventBridge identifica a ameça e executa uma função Lambda. **Data:** *03/03/2023*
 
